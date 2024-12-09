@@ -1,2 +1,31 @@
-<app-data-binding-demo></app-data-binding-demo>
+<!-- <app-data-binding-demo></app-data-binding-demo> -->
+<!-- <app-diresctives-demo></app-diresctives-demo> -->
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Admin Panel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/" routerlinkActive="active" >Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/user" outerlinkActive="active"routerlinkActive="active" >User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerL00ink="post" routerlinkActive="active">Post</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 <router-outlet/>
