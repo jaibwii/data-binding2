@@ -1,1 +1,124 @@
-<p>home works!</p>
+<!-- <h1>Angular Data Binding</h1>
+
+<h2>Using One-Way Data Binding</h2>
+
+<h3>Text Interpolation</h3>
+<h4>Greetings ,{{ username }}.</h4>
+<h5>{{username}} {{  description }}</h5>
+
+
+<h3>Style Binding</h3>
+
+<p [style.color]= "textColor">I am Blue!</p>
+<p [style.color]= "textColor2">I am Red!</p>
+<p [style.color]= "textColor3">I am Yellow!</p>
+
+<h2>Using Two-Way Data Binding</h2>
+
+<div>
+    <label for="forms">What is your thoughts regarding this article?</label>
+    <br>
+    <input [(ngModel)]="myStory" placeholder="Enter here">
+    <p>Here is how it will show in our website: <strong><em>"{{ myStory }}"</em></strong></p>
+
+</div>
+
+<h2>Using Event Binding</h2>
+<h3>How old are you?</h3>
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+<p>You are {{ count }} years old.</p>
+
+
+<h1>Angular Directives</h1>
+<h3>{{ username  }},Here are the <strong>Top 3 Most used Electric Products of 2024</strong></h3>
+
+<ul>
+    <li *ngFor="let device of devices"> {{ device }}</li>
+</ul> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Data Binding & Directives</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+    <h1 class="text-center mb-4">Angular Data Binding & Directives</h1>
+
+    <!-- One-Way Data Binding -->
+    <section class="mb-5">
+        <h2>Using One-Way Data Binding</h2>
+
+        <!-- Text Interpolation -->
+        <div class="card mb-4">
+            <div class="card-header">Text Interpolation</div>
+            <div class="card-body">
+                <p class="fw-bold">Greetings, {{ username }}.</p>
+                <p class="text-muted">{{ username }} {{ description }}</p>
+            </div>
+        </div>
+
+        <!-- Style Binding -->
+        <div class="card">
+            <div class="card-header">Style Binding</div>
+            <div class="card-body">
+                <p [style.color]="textColor" class="fw-bold">I am Blue!</p>
+                <p [style.color]="textColor2" class="fw-bold">I am Red!</p>
+                <p [style.color]="textColor3" class="fw-bold">I am Yellow!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two-Way Data Binding -->
+    <section class="mb-5">
+        <h2>Using Two-Way Data Binding</h2>
+        <div class="card">
+            <div class="card-header">Two-Way Binding Example</div>
+            <div class="card-body">
+                <label for="thoughts" class="form-label">What are your thoughts regarding this article?</label>
+                <input id="thoughts" class="form-control mb-3" [(ngModel)]="myStory" placeholder="Enter here">
+                <p>Here is how it will show on our website: <strong><em>"{{ myStory }}"</em></strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Binding -->
+    <section class="mb-5">
+        <h2>Using Event Binding</h2>
+        <div class="card">
+            <div class="card-header">Event Binding Example</div>
+            <div class="card-body">
+                <h3>How old are you?</h3>
+                <div class="d-flex gap-2 mb-3">
+                    <button class="btn btn-primary" (click)="increment()">+</button>
+                    <button class="btn btn-danger" (click)="decrement()">-</button>
+                </div>
+                <p>You are <strong>{{ count }}</strong> years old.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Angular Directives -->
+    <section>
+        <h2>Angular Directives</h2>
+        <div class="card">
+            <div class="card-header">Top 3 Most Used Electric Products of 2024</div>
+            <div class="card-body">
+                <p>{{ username }}, here are the <strong>Top 3 Most Used Electric Products of 2024</strong>:</p>
+                <ul class="list-group">
+                    <li *ngFor="let device of devices" class="list-group-item">{{ device }}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
